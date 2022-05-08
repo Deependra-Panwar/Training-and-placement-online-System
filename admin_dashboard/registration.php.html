@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+   <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<script>
+            function stu_preview() {
+                frame.src = URL.createObjectURL(event.target.files[0]);
+            }
+            
+            function ShowHideDiv() {
+            var chkYes = document.getElementById("chkYes");
+            var dvtext = document.getElementById("dvtext");
+            dvtext.style.display = chkYes.checked ? "block" : "none";
+            }
+            function stud_submit(){
+             window.alert("your form has been sumitted. Wait for Apporaval From TPO Cell")
+            }
+        </script>
+<body>
+
+<div class="container pt-3 my-4 border rounded bg-warning text-dark">
+    <div class="row">
+        <div class="col-sm-10">
+            <h1 class="text-dark"><strong>Registration Form</strong></h1>    
+        </div>
+        <div class="col-sm-2">
+            <ul class="nav nav-pills border rounded">
+              <li class="nav-item ">
+                    <a class="nav-link " data-bs-toggle="pill" href="#home">Student</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#menu1">Hirer</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+    
+        <div class="tab-content">
+            <div class="tab-pane" id="home">
+                <div class="row">
+                <div class="col-sm-2">
+                    <div class="mb-3 mt-3">
+                        <img height="150px" width="150px" id="frame" src="" class="rounded mx-auto d-block img-responsive pl-5 mb-3 " />
+                            <input class="form-control" type="file" id="stu_formFile" onchange="stu_preview()">
+                        <h4 class="pt-5 text-cemter">Already have an Account?</h4>
+                        <a href="index.html"><button class="btn btn-primary text-center" value="Login" >Login</button></a>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-floating mb-3 mt-3">
+                      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="email">
+                      <label for="email">Name</label>
+                    </div>
+
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="text" class="form-control" id="roll_no" placeholder="Enter password" name="pswd">
+                      <label for="roll_no">Roll No</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                     <select class="form-select" id="branch" name="sellist">
+                        <option>Computer Science</option>
+                        <option>Chemical </option>
+                        <option>Mechnical</option>
+                        <option>civil</option>
+                      </select>
+                      <label for="branch">Branch</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <select class="form-select" id="Course" name="sellist">
+                        <option>B.tech</option>
+                        <option>B.E </option>
+                        <option>M.E</option>
+                        <option>MCA</option>
+                        <option>Phd</option>
+                        </select>
+                        <label for="Course">Course</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="text" class="form-control" id="user" placeholder="Enter password" name="Con_pwd">
+                      <label for="con_pwd">User Name</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                      <label for="pwd">Password</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="password" class="form-control" id="con_pwd" placeholder="Enter password" name="pswd">
+                      <label for="con_pwd">Conform Password</label>
+                    </div> 
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-floating mb-3 mt-3">
+                      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                      <label for="email">Email</label>
+                    </div>
+
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="text" class="form-control" id="per10" placeholder="Enter password" name="pswd">
+                      <label for="per10">Percentage in 10</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                      <label for="pwd">Percentage in 12</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                      <label for="pwd">Percentage in Guraution</label>
+                    </div>
+                    <div class=" mt-3 mb-3 p-3">
+                          <label>Are you post guraution student:-</label>
+                            <input type="radio" id="chkNo" name="chk" onclick="ShowHideDiv()" />   No
+                            <input type="radio" id="chkYes" name="chk" onclick="ShowHideDiv()" />  Yes 
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                            <input type="text" class="form-control" id="dvtext" placeholder="Enter password" name="pswd">
+                            <label for="dvtext">Percentage in post Guraution</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                          <input type="submit" id="stu_submit" class="btn btn-success btn-lg float-end" value="Submit" onclick="stud_submit()">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="tab-pane container fade" id="menu1">
+                <div class="row">
+                <div class="col-sm-2">
+                    <div class="mb-3 mt-3">
+                        <img height="150px" width="150px" id="frame" src="" class=" img-responsive pl-5 mb-3 " />
+                            <input class="form-control" type="file" id="com_formFile" onchange="com_preview()">
+                        <h4 class="pt-5 text-cemter">Already have an Account?</h4>
+                        <a href="index.html"><button class="btn btn-primary text-cemter" value="Login" >Login</button></a>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-floating mb-3 mt-3">
+                      <input type="text" class="form-control" id="com_name" placeholder="Enter Name" name="com_name">
+                      <label for="com_name">Company Name</label>
+                    </div>
+
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="number" class="form-control" id="no_of_seat" placeholder="Enter password" name="no_of_seat">
+                      <label for="no_of_seat">Number of Seat</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                     <select class="form-select" id="com_type" name="com_type">
+                        <option>MNC</option>
+                        <option>Product base</option>
+                        <option>Serive Base</option>
+                        <option>Other</option>
+                      </select>
+                      <label for="com_type">Company Type</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="text" class="form-control" id="com_ctc" placeholder="Enter password" name="com_ctc">
+                      <label for="com_ctc">CTC</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="text" class="form-control" id="web_link" placeholder="Enter password" name="web_link">
+                      <label for="web_link">Website Link</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="text" class="form-control" id="position_req" placeholder="Enter password" name="position_req">
+                      <label for="position_req">position Required</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="text" class="form-control" id="com_user" placeholder="Enter password" name="com_user">
+                      <label for="com_user">Username</label>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-floating mb-3 mt-3">
+                      <input type="text" class="form-control" id="skill" placeholder="Enter email" name="skill">
+                      <label for="skill">Technology Required</label>
+                    </div>
+
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="text" class="form-control" id="head_q" placeholder="Enter password" name="head_q">
+                      <label for="head_q">Location/Headquater</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="number" class="form-control" id="com_phn" placeholder="Enter password" name="com_phn">
+                      <label for="com_phn">Contact Number</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="email" class="form-control" id="com_email" placeholder="Enter password" name="com_email">
+                      <label for="com_email">Compaany Email</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="password" class="form-control" id="com_pwd" placeholder="Enter password" name="com_pwd">
+                      <label for="com_pwd">Password</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                      <input type="password" class="form-control" id="com_con_pwd" placeholder="Enter password" name="com_con_pwd">
+                      <label for="com_con_pwd">Conform Password</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                          <input type="submit" id="com_submit" class="btn btn-success btn-lg float-end" value="Submit">
+                    </div>
+                </div>
+                </div>
+            </div>
+    </div>
+</div>
+</body>
+</html>
